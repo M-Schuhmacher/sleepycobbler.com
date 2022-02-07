@@ -44,13 +44,6 @@ function App() {
       <div className="Contents">
         <Header />
         <Intro />
-        <div className="Tile-area">
-          <div className="Tile-area-contents">
-        {tiles.map((tile) =>
-          <Tile title={tile.title} link={tile.link} thumb={tile.thumb} />
-        )}
-        </div>
-        </div>
         <Footer />
       </div>
     </div>
