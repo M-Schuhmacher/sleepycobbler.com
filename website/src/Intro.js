@@ -1,3 +1,5 @@
+import Tile from './Tile'
+
 const tiles = [
     {
       "title": "Foundry VTT",

@@ -2,7 +2,6 @@ import './App.css';
 import Header from './Header'
 import Intro from './Intro'
 import Footer from './Footer'
-import Tile from './Tile'
 import React from "react"
 
 function App() {
