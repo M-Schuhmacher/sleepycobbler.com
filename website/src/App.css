@@ -1,5 +1,5 @@
 html {
-  background-color: #355B69;
+  background-color: #E6D5AC;
   color:white;
 }
 
@@ -26,7 +26,7 @@ body {
   display:flex;
   color: white;
   justify-content: center;
-  background-color: #306959;
+  background-color: #1F3D61;
 }
 
 .header-contents {
@@ -59,7 +59,7 @@ body {
 .About-me-container {
   display: flex;
   justify-content: center;
-  background-color: #244F43;
+  background-color: #3296AD;
   box-shadow: 0px 0px 10px black inset;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .my-face {
   max-width: 150px;
-  border: 10px solid #3E2F2E;
+  border: 10px solid #73C7C4;
   border-radius: 5px;
   margin: 20px;
 }
@@ -89,6 +89,9 @@ body {
 
 .Footer-content > a > img {
   margin: 20px;
+  filter: black; /* IE6-9 */
+  -webkit-filter: brightness(0%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: brightness(0%); /* Microsoft Edge and Firefox 35+ */
 }
 
 .Tile-area {
@@ -106,14 +109,14 @@ body {
 }
 
 .Tile-container {
-  background-color: #244F43;
+  background-color: #D19846;
   transition: all .15s linear 0s;
   box-shadow: 10px 10px 10px black inset;
   display: flex;
   width:300px;
   height:300px;
-  margin:20px;
-  border-radius: 100px;
+  margin:5px;
+  border-radius: 10px;
   justify-content: center;
 }
 
@@ -123,9 +126,11 @@ body {
 
 .Tile-contents {
   display: flex;
+  transition: all .15s linear 0s;
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin: -5px;
 }
 
 .Tile-contents > a {
@@ -137,17 +142,17 @@ body {
   height: 100%;
 }
 
-.Tile-contents > a:hover {
+.Tile-container:hover .Tile-contents {
   transform: translate(10px, 10px);
 }
 
-.Tile-contents > a:active {
-  transform: translate(10px, 10px);
-}
 
 .Tile-contents > a > img {
   height: 150px;
   object-fit: contain;
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
 .Tile-contents > a > h3 {
