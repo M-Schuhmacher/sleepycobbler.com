@@ -7,31 +7,26 @@ const tiles = [
       "thumb":"./logo_foundryvtt.png"
     },
     {
-      "title": "Invite Music Bot",
-      "link": "https://discordapp.com/oauth2/authorize?client_id=909901585755303957&scope=bot&permissions=36752448",
-      "thumb":"./logo_musicbot.png"
+      "title": "Star System Generation",
+      "link": "https://www.sleepycobbler.com/spacecore",
+      "thumb":"./galaxy.png"
     },
     {
       "title": "Discord & Dragons",
-      "link": "https://sleepycobbler.com/dnd",
+      "link": "https://github.com/sleepycobbler/discord-dragons",
       "thumb":"./logo_dnd_transparent.png"
     },
     {
       "title": "Tic-Tac-Toe",
-      "link": "https://sleepycobbler.com/ttt",
+      "link": "https://www.sleepycobbler.com/ttt",
       "thumb":"./logo_tictactoe.png"
     },
     {
-      "title": "Trivia Time Client",
-      "link": "https://sleepycobbler.com/trivia-time",
-      "thumb":"./logo_stopwatch.png"
-    },
-    {
         "title": "Absolver Deckbuilder",
-        "link": "https://sleepycobbler.com/absolver",
+        "link": "https://github.com/sleepycobbler/Absolver",
         "thumb":"./logo_absolver.png"
     }
-  ]
+]
 
 const Intro = () => (
     <div>
