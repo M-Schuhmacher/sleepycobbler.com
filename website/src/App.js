@@ -6,47 +6,18 @@ import Fab from '@mui/material/Fab'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout/Layout";
+import Home from "./pages/Home/Home";
 
 export default function App() {
   return (
-    <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="h6" sx={{ flexGrow: 1 }}>
-              cra-template-mui
-            </Typography>
-            <IconButton
-              size="large"
-              edge="end"
-              color="inherit"
-              onClick={() => window.open('https://github.com/tanabee/cra-template-mui', '_blank')}
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </Box>
-      <Box sx={{ p: 3 }}>
-        <Typography variant="h1">h1. Heading</Typography>
-        <Typography variant="h2">h2. Heading</Typography>
-        <Typography variant="h3">h3. Heading</Typography>
-        <Typography variant="h4">h4. Heading</Typography>
-        <Typography variant="h5">h5. Heading</Typography>
-        <Typography variant="h6">h6. Heading</Typography>
-        <Typography variant="body1">body1. text</Typography>
-        <Typography variant="body2">body2. text</Typography>
-      </Box>
-      <Fab
-        color="secondary"
-        sx={{
-          position: 'fixed',
-          right: ({ spacing }) => spacing(3),
-          bottom: ({ spacing }) => spacing(3),
-        }}
-      >
-        <AddIcon />
-      </Fab>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }

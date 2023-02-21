@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Foundry VTT",
+      "link": "https://www.sleepycobbler.com/foundry",
+      "thumb":"./logo_foundryvtt.png"
+    },
+    {
+      "title": "Star System Generation",
+      "link": "https://www.sleepycobbler.com/spacecore",
+      "thumb":"./galaxy.png"
+    },
+    {
+      "title": "Discord & Dragons",
+      "link": "https://github.com/sleepycobbler/discord-dragons",
+      "thumb":"./logo_dnd_transparent.png"
+    },
+    {
+      "title": "Tic-Tac-Toe",
+      "link": "https://www.sleepycobbler.com/ttt",
+      "thumb":"./logo_tictactoe.png"
+    },
+    {
+        "title": "Absolver Deckbuilder",
+        "link": "https://github.com/sleepycobbler/Absolver",
+        "thumb":"./logo_absolver.png"
+    }
+]
