@@ -1,14 +1,9 @@
-import AddIcon from '@mui/icons-material/Add'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Fab from '@mui/material/Fab'
-import IconButton from '@mui/material/IconButton'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 export default function App() {
   return (
@@ -16,6 +11,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path='projects' element={<Projects />} />
+          <Route path='about' element={<About />} />
+          <Route path='contact' element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
