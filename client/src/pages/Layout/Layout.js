@@ -8,25 +8,47 @@ import Container from '@mui/material/Container';
 function Layout() {
   return (
     <>
-    <AppBar position="static" sx={{backgroundColor: "#696969"}}>
+    <AppBar position="static" sx={{backgroundColor: "#000000"}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters display="grid">
           <Typography
-            variant="h6"
-            noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
-              display: 'flex',
-              fontFamily: 'Source Code Pro, monospace',
-              fontWeight: 700,
+              mr: '20px',
+              fontFamily: 'Source Code Pro, sans-serif',
               textDecoration: 'none',
-              color: 'white'
+              color: 'white',
             }}
           >
             The Sleepy Cobbler's Workshop
           </Typography>
+          <Container sx={{ display: "flex", justifyContent: 'flex-end'}}>
+          <Typography
+            component="a"
+            href="/about"
+            sx={{
+              fontFamily: 'Source Code Pro, sans-serif',
+              textDecoration: 'none',
+              color: 'white',
+              m: '5px'
+            }}
+          >
+            About
+          </Typography>
+          <Typography
+            component="a"
+            href="/contact"
+            sx={{
+              fontFamily: 'Source Code Pro, sans-serif',
+              textDecoration: 'none',
+              color: 'white',
+              m: '5px'
+            }}
+          >
+            Contact
+          </Typography>
+          </Container>
         </Toolbar>
       </Container>
     </AppBar>
