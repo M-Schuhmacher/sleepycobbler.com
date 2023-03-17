@@ -16,7 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway&family=Source+Code+Pro&family=Stick+No+Bills:wght@800&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+    integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
   <title>Schuhmacher Inc.</title>
   <style>
     :root {
@@ -30,12 +31,21 @@
       --primary-rgb: var(--white-rgb);
     }
 
+    html {
+      overflow: hidden;
+    }
+
     body {
       height: 100vh;
       width: 100vw;
       background-color: rgb(var(--background-rgb));
       margin: 0rem;
       overflow: hidden;
+      position: relative;
+    }
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
     }
   </style>
 </head>

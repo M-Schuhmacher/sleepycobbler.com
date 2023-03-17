@@ -4,35 +4,27 @@
    position: absolute;
    left: 50%;
    top: 50%;
-   transform: translate(-50%, -50%);
+   transform: translate(-150%, -50%);
    user-select: none;
    /* -- Prevent image highlighting -- */
    z-index: 9;
 }
 
-#image-track>.image {
+#image-track>.screen>.image {
    z-index: 1;
    width: 40vmin;
+   min-width: 200px;
    height: 56vmin;
+   min-height: 280px;
    object-fit: cover;
    object-position: 100% center;
 }
 
-#image-track>.screen>.image {
-   z-index: 1;
-   width: 40vmin;
-   min-width: 300px;
-   height: 56vmin;
-   min-height: 420px;
-   object-fit: cover;
-   object-position: 50% center;
-}
-
 .screen {
    width: 40vmin;
-   min-width: 300px;
+   min-width: 200px;
    height: 56vmin;
-   min-height: 420px;
+   min-height: 280px;
    display: flex;
    border: 3px solid rgb(var(--primary-rgb) / 80%);
    border-radius: 1rem;

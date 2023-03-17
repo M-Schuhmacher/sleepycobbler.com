@@ -5,8 +5,8 @@ import { Panel } from '../Panel/Panel';
 
 const PanelTrack = () => {
    const [mouseDownAt, setMouseDownAt] = useState(0),
-      [scrollPercentage, setScrollPercentage] = useState(-50),
-      [prevScrollPercentage, setPrevScrollPercentage] = useState(-50);
+      [scrollPercentage, setScrollPercentage] = useState(0),
+      [prevScrollPercentage, setPrevScrollPercentage] = useState(0);
 
    var track = useRef(document.getElementById("image-track"));
 
@@ -68,18 +68,32 @@ const PanelTrack = () => {
    }, [prevScrollPercentage, scrollPercentage]);
 
    useEffect(() => {
-      document.addEventListener("mouseup", handleOnUp);
-      document.addEventListener("mousedown", handleOnDown);
-      document.addEventListener("mousemove", handleOnMove);
-      document.addEventListener("wheel", handleWheel);
+      window.addEventListener("mouseup", handleOnUp);
+      window.addEventListener("ontouchend", handleOnUp);
+      window.addEventListener("mousedown", handleOnDown);
+      window.addEventListener("touchstart", e => handleOnDown(e.touches[0]));
+      window.addEventListener("mousemove", handleOnMove);
+      window.addEventListener("touchmove", e => handleOnMove(e.touches[0]));
+      window.addEventListener("wheel", handleWheel);
       track.current = document.getElementById("image-track");
       return () => {
-         document.removeEventListener("mouseup", handleOnUp);
-         document.removeEventListener("mousedown", handleOnDown);
-         document.removeEventListener("mousemove", handleOnMove);
-         document.removeEventListener("wheel", handleWheel);
+         window.removeEventListener("mouseup", handleOnUp);
+         window.removeEventListener("mousedown", handleOnDown);
+         window.removeEventListener("mousemove", handleOnMove);
+         window.removeEventListener("touchmove", e => handleOnMove(e.touches[0]));
+         window.removeEventListener("touchstart", e => handleOnDown(e.touches[0]));
+         window.removeEventListener("wheel", handleWheel);
       };
    }, [handleOnMove, handleOnDown, handleOnUp, handleWheel]);
+
+   useEffect(() => {
+      const currentTrack = track.current;
+      if (currentTrack !== null) {
+         currentTrack.animate({
+            transform: `translate(0%, -50%)`
+         }, { duration: 1200, fill: "forwards" });
+    }
+   }, []);
 
    return <div id="image-track">
       {PanelData().map(data => { return <Panel {...data} key={data.name} /> })}
