@@ -1,0 +1,19 @@
+ .red {
+    --primary-rgb: var(--red-rgb);
+ }
+
+ .blue {
+    --primary-rgb: var(--blue-rgb);
+ }
+
+ .yellow {
+    --primary-rgb: var(--yellow-rgb);
+ }
+
+ .purple {
+    --primary-rgb: var(--purple-rgb);
+ }
+
+ .green {
+    --primary-rgb: var(--green-rgb);
+ }
