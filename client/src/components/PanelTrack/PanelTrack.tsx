@@ -69,19 +69,14 @@ const PanelTrack = () => {
 
    useEffect(() => {
       window.addEventListener("mouseup", handleOnUp);
-      window.addEventListener("ontouchend", handleOnUp);
       window.addEventListener("mousedown", handleOnDown);
-      window.addEventListener("touchstart", e => handleOnDown(e.touches[0]));
       window.addEventListener("mousemove", handleOnMove);
-      window.addEventListener("touchmove", e => handleOnMove(e.touches[0]));
       window.addEventListener("wheel", handleWheel);
       track.current = document.getElementById("image-track");
       return () => {
          window.removeEventListener("mouseup", handleOnUp);
          window.removeEventListener("mousedown", handleOnDown);
          window.removeEventListener("mousemove", handleOnMove);
-         window.removeEventListener("touchmove", e => handleOnMove(e.touches[0]));
-         window.removeEventListener("touchstart", e => handleOnDown(e.touches[0]));
          window.removeEventListener("wheel", handleWheel);
       };
    }, [handleOnMove, handleOnDown, handleOnUp, handleWheel]);
