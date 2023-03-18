@@ -73,11 +73,13 @@ const PanelTrack = () => {
       window.addEventListener("mousemove", handleOnMove);
       window.addEventListener("wheel", handleWheel);
       track.current = document.getElementById("image-track");
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
       return () => {
          window.removeEventListener("mouseup", handleOnUp);
          window.removeEventListener("mousedown", handleOnDown);
          window.removeEventListener("mousemove", handleOnMove);
          window.removeEventListener("wheel", handleWheel);
+         document.getElementsByTagName("html")[0].style.overflow = "scroll";
       };
    }, [handleOnMove, handleOnDown, handleOnUp, handleWheel]);
 
